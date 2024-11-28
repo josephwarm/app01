@@ -23,8 +23,22 @@ spec:
       persistence:
         enabled: true
         size: 8Gi
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "250m"
+        limits:
+          memory: "1Gi"
+          cpu: "500m"
     replica:
       replicaCount: 4  
       persistence:
         enabled: true
         size: 8Gi
+      resources:
+        requests:
+          memory: "256Mi"
+          cpu: "100m"
+        limits:
+          memory: "512Mi"
+          cpu: "200m"
